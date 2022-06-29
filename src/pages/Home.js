@@ -16,6 +16,8 @@ import {
 } from "@chakra-ui/react";
 import TweetBox from "../components/TweetBox";
 import PostBody from "../components/PostBody";
+import NewsBar from "../components/NewsBar";
+import TopBar from "../components/TopBar";
 const Home = () => {
 	return (
 		<>
@@ -33,9 +35,12 @@ const Home = () => {
 							width="56vw"
 							height="26vh"
 							backgroundColor="#04031a">
-							<Flex height="25vh" justifyContent="center">
-								<TweetBox />
-							</Flex>
+							<VStack height="25vh" justifyContent="center">
+								<TopBar title={"Home"} />
+								<Flex justifyContent="center">
+									<TweetBox />
+								</Flex>
+							</VStack>
 						</Box>
 
 						<Box height="75vh" overflow={"hidden"} color="white">
@@ -51,11 +56,15 @@ const Home = () => {
 				</Box>
 
 				<Box className="borderClass" width="25%" backgroundColor="#04031a">
-					<Flex height="101vh" justifyContent="center" alignItems="center">
-						<Text fontWeight="bold" color="White" fontSize="25px">
-							Section 3
-						</Text>
-					</Flex>
+					<VStack height="101vh">
+						<TopBar title={"News"} />
+						<Flex
+							justifyContent="center"
+							alignItems="center"
+							overflow={"hidden"}>
+							<NewsBar />
+						</Flex>
+					</VStack>
 				</Box>
 			</HStack>
 		</>

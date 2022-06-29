@@ -16,6 +16,8 @@ import {
 	Spacer,
 	Heading,
 } from "@chakra-ui/react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const TweetBox = () => {
 	const [body, setTweetBody] = useState("");
 	const onChange = (e) => {
@@ -34,7 +36,15 @@ const TweetBox = () => {
 		const data = await request.json();
 		if (data.code === 201) {
 			await setTweetBody("");
-			console.log(body);
+			toast.success(" Successfully tweeted!", {
+				position: "bottom-right",
+				autoClose: 2000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: false,
+				draggable: true,
+				progress: undefined,
+			});
 		}
 	};
 
@@ -47,7 +57,7 @@ const TweetBox = () => {
 					mt={15}
 					bg="#04031a"
 					w="50vw"
-					h="15vh"
+					h="5vh"
 					placeholder="What's Happening?"
 					resize="none"
 					color="white"
@@ -64,6 +74,17 @@ const TweetBox = () => {
 						p={5}>
 						Tweet
 					</Button>
+					<ToastContainer
+						position="bottom-right"
+						autoClose={5000}
+						hideProgressBar={false}
+						newestOnTop={false}
+						closeOnClick
+						rtl={false}
+						pauseOnFocusLoss
+						draggable
+						pauseOnHover
+					/>
 				</Flex>
 			</Box>
 		</>

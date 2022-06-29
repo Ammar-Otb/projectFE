@@ -28,6 +28,7 @@ import ontifImg from "../images/notif.png";
 import profileImg from "../images/profile.png";
 import msgImg from "../images/msg.png";
 import logo from "../images/logo.png";
+import helpimg from "../images/help.png";
 import styled from "styled-components";
 
 const LeftPane = () => {
@@ -60,9 +61,9 @@ const LeftPane = () => {
 					<Image boxSize="25px" mr={8} mb={4} src={msgImg}></Image>
 					Messages
 				</Link>
-				<Link style={linkStyle} to="/home">
-					<Image boxSize="25px" mr={8} mb={4} src={profileImg}></Image>
-					Profile
+				<Link style={linkStyle} to="/help">
+					<Image boxSize="25px" mr={8} mb={4} src={helpimg}></Image>
+					Help
 				</Link>
 
 				<Stack>

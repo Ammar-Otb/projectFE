@@ -1,6 +1,9 @@
 * {
 	-ms-overflow-style: none;
 }
+body {
+	background-color: #04031a !important;
+}
 ::-webkit-scrollbar {
 	display: none;
 }
@@ -41,4 +44,30 @@ li {
 	border-bottom-style: solid !important;
 	border-width: 0.05px !important;
 	border-color: rgb(68, 66, 66) !important;
+}
+.card-body {
+	background-color: #04031a;
+	border: none !important;
+	outline: none !important;
+}
+.card {
+	background-color: #04031a;
+	border: none !important;
+	outline: none !important;
+}
+.topbar nav {
+	background-color: #04031a !important;
+}
+.help-container nav {
+	background-color: #49718b !important;
+}
+.navbar-brand {
+	font-weight: bold;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	height: 100vh;
 }

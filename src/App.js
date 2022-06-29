@@ -19,15 +19,14 @@ import {
 	NavLink,
 } from "react-router-dom";
 import Home from "./pages/Home";
+import Help from "./pages/Help";
 function App() {
 	return (
 		<Router>
 			<Routes>
 				<Route path="/" element={<Home />}></Route>
 				<Route path="/home" element={<Home />}></Route>
-				{/* <Route path="about" element={<About />}></Route>
-				<Route path="create" element={<AddBlog />} />
-				<Route path="*" element={<NoPage />}></Route> */}
+				<Route path="/help" element={<Help />}></Route>
 			</Routes>
 		</Router>
 	);
